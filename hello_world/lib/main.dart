@@ -20,8 +20,8 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         items:[
-          BottomNavigationBarItem(icon:Icon(Icons.person), title:Text('Health Parameter')),
-          BottomNavigationBarItem(icon:Icon(Icons.ac_unit), title:Text('Manual Data')),
+          BottomNavigationBarItem(icon:Icon(Icons.person), label:('Health Parameter')),
+          BottomNavigationBarItem(icon:Icon(Icons.ac_unit), label:('Manual Data')),
 
         ]
       ),
