@@ -21,7 +21,7 @@ class MyHomePage extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         items:[
           BottomNavigationBarItem(icon:Icon(Icons.person), label:('Health Parameter')),
-          BottomNavigationBarItem(icon:Icon(Icons.ac_unit), label:('Manual Data')),
+          BottomNavigationBarItem(icon:Icon(Icons.data_usage), label:('Manual Data')),
 
         ]
       ),
