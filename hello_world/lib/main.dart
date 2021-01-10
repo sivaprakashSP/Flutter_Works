@@ -14,7 +14,14 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget{
+  @override
+
+  _MyAppState createState()=>_MyAppState();
+}
+
+class _MyAppState extends State<MyHomePage>{
+  int start=0;
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -22,8 +29,15 @@ class MyHomePage extends StatelessWidget {
         items:[
           BottomNavigationBarItem(icon:Icon(Icons.person), label:('Health Parameter')),
           BottomNavigationBarItem(icon:Icon(Icons.data_usage), label:('Manual Data')),
-
-        ]
+           BottomNavigationBarItem(icon:Icon(Icons.exit_to_app), label:('Quit')),
+        ],
+        selectedItemColor: Colors.yellow,
+        currentIndex: start,
+        onTap: (index){
+        setState(() {
+          start=index;
+        });
+        },
       ),
     );
   }
