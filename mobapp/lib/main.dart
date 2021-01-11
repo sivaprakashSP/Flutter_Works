@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget{
 /*
 class App extends StatelessWidget{
   @override
-  Widget build(BuildContext conetext){
+  Widget build(BuildContext context){
     return MaterialApp(
       home:SafeArea(
         child:Scaffold(
