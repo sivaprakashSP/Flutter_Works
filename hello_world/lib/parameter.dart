@@ -10,78 +10,91 @@ class _HealthparamState extends State<Healthparam> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        title: Text('Health Tracker',style:TextStyle(fontSize: 25)),
+        title:Image.asset('assets/logo.png',
+        height: 99.0,
+        width: 100.0,
+        alignment: Alignment.topLeft,
+        ),
+        //title: Text('Health Tracker',style:TextStyle(fontSize: 25)),
       ),
       body:Container(
       padding: EdgeInsets.all(30),  
-      child: ListView(
+      child: GridView.count(
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
+        crossAxisCount: 2,
         children: [
           Container(
+            alignment: Alignment.center,
             color: Colors.blue,
             child: ListTile(
-              leading: Icon(Icons.medical_services),
+              //leading: Icon(Icons.medical_services),
               title: Text('Blood Temparture'),
               subtitle: Text('Value'),
               trailing: Icon(Icons.pie_chart),
             ),
           ),
-          SizedBox(height: 40,),
+          //SizedBox(height: 40,),
           Container(
+            alignment: Alignment.center,
             color: Colors.blue,
             child: ListTile(
-              leading: Icon(Icons.medical_services),
+              //leading: Icon(Icons.medical_services),
               title: Text('Blood Pressure'),
               subtitle: Text('Value'),
               trailing: Icon(Icons.pie_chart),
             ),
           ),
-          SizedBox(height: 40,),
+          //SizedBox(height: 40,),
           Container(
+            alignment: Alignment.center,
             color: Colors.blue,
             child: ListTile(
-              leading: Icon(Icons.medical_services),
+              //leading: Icon(Icons.medical_services),
               title: Text('Glucose'),
               subtitle: Text('Value'),
               trailing: Icon(Icons.pie_chart),
             ),
           ),
-          SizedBox(height: 40,),
+          //SizedBox(height: 40,),
           Container(
-            
+            alignment: Alignment.center,
             color: Colors.blue,
             child: ListTile(
-              leading: Icon(Icons.medical_services),
+              //leading: Icon(Icons.medical_services),
               title: Text('Respiration Level'),
               subtitle: Text('Value'),
               trailing: Icon(Icons.pie_chart),
             ),
           ),
-          SizedBox(height: 40,),
+          //SizedBox(height: 40,),
           Container(
+            alignment: Alignment.center,
             color: Colors.blue,
             child: ListTile(
-              leading: Icon(Icons.medical_services),
+              //leading: Icon(Icons.medical_services),
               title: Text('Heart Rate'),
               subtitle: Text('Value'),
               trailing: Icon(Icons.pie_chart),
             ),
           ),
-          SizedBox(height: 40,),
+          //SizedBox(height: 40,),
           Container(
+            alignment: Alignment.center,
             color: Colors.blue,
             child: ListTile(
-              leading: Icon(Icons.medical_services),
+              //leading: Icon(Icons.medical_services),
               title: Text('Oxygen Saturation'),
               subtitle: Text('Value'),
               trailing: Icon(Icons.pie_chart),
             ),
           ),
-          SizedBox(height: 40,),
+          //SizedBox(height: 40,),
           Container(
+            alignment: Alignment.center,
             color: Colors.blue,
             child: ListTile(
-              leading: Icon(Icons.medical_services),
+              //leading: Icon(Icons.medical_services),
               title: Text('Cholestrol'),
               subtitle: Text('Value'),
               trailing: Icon(Icons.pie_chart),
