@@ -12,8 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-      brightness: Brightness.dark,
-      primaryColor: Colors.lightBlue,
+      brightness: Brightness.light,
+      primaryColor: Colors.green,
     ),
       home: Scaffold(
         body: MyHomePage(),
@@ -47,7 +47,7 @@ class _MyAppState extends State<MyHomePage>{
     return Scaffold(
       body:_children[start],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.green,
         currentIndex : start,
         items:[
           BottomNavigationBarItem(
@@ -59,7 +59,7 @@ class _MyAppState extends State<MyHomePage>{
             label:('Manual Data'),
             ),
         ],
-        selectedItemColor: Colors.white,
+        selectedItemColor: Colors.red,
         onTap: onTappedBar,
       ),
     );

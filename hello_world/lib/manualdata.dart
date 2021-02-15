@@ -14,7 +14,7 @@ class _DatascreenState extends State<Datascreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title:Text("Physical health"),
+        title:Text("Physical health",style: TextStyle(color: Colors.red)),
         ),
       body: Container(
         margin: EdgeInsets.all(24),
@@ -37,13 +37,32 @@ class _DatascreenState extends State<Datascreen> {
               RaisedButton(
                 child:Text(
                   'Submit',
-                  style: TextStyle(color:Colors.white),
+                  style: TextStyle(color:Colors.red),
                 ),
-                onPressed: () => {},
+                onPressed: () => {
+                  Navigator.push(context,MaterialPageRoute(builder: (context) => Navigate())),
+                },
               ),
             ],
           ),
       ),
+    ),
+    );
+  }
+}
+
+class Navigate extends StatefulWidget {
+  @override
+  _NavigateState createState() => _NavigateState();
+}
+
+class _NavigateState extends State<Navigate> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        child: Text("Second Page"),
+        alignment: Alignment.center,
     ),
     );
   }

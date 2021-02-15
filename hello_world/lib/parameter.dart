@@ -10,12 +10,8 @@ class _HealthparamState extends State<Healthparam> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:Image.asset('assets/logo.png',
-        height: 99.0,
-        width: 100.0,
-        alignment: Alignment.topLeft,
-        ),
-        //title: Text('Health Tracker',style:TextStyle(fontSize: 25)),
+        title: Text('Health Tracker',style:TextStyle(fontSize: 25,fontStyle: FontStyle.italic,color:Colors.red)),
+        centerTitle: true,
       ),
       body:Container(
       padding: EdgeInsets.all(30),  
@@ -103,7 +99,6 @@ class _HealthparamState extends State<Healthparam> {
         ],
       ),
     ),
-  );
-    
+  );  
   }
 }
