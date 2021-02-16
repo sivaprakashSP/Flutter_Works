@@ -63,14 +63,39 @@ class _RegisterpageState extends State<Registerpage> {
           ),
           SizedBox(height: 20),
           RaisedButton(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                 color: Colors.yellowAccent,
                 splashColor: Colors.blueAccent,
                 child:Text('Submit',style: TextStyle(color:Colors.red)),
-                onPressed: () => {},
+                onPressed: () => {
+                  Navigator.push(context,MaterialPageRoute(builder: (BuildContext context) => Submitpage())),
+                },
               ),
           ],
         ),
       ),
+    );
+  }
+}
+
+class Submitpage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      child:Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Submitted Successfully',style: TextStyle(color: Colors.orangeAccent,fontSize: 20)),
+          SizedBox(height: 20),
+          RaisedButton(onPressed: () => {
+            Navigator.pop(context),
+          },
+          child: Text('Back'),
+          ),
+        ],
+      ),
+      color: Colors.white,
     );
   }
 }
