@@ -25,54 +25,73 @@ class Registerpage extends StatefulWidget {
 class _RegisterpageState extends State<Registerpage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Login Page'),
-        backgroundColor: Colors.yellow,
-        centerTitle: true,
-      ),
-      body: Form(
-        child: Column(
-         mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextFormField(
-              decoration: const InputDecoration(
-              hintText: 'Your Name',
-              labelText: 'Name',
-            ),
-          ),
-          SizedBox(height: 20),
-          TextFormField(
-              decoration: const InputDecoration(
-              hintText: 'Date of Birth',
-              labelText: 'DOB',
-            ),
-          ),
-          SizedBox(height: 20),
-          TextFormField(
-              decoration: const InputDecoration(
-              hintText: 'Your Gender',
-              labelText: 'Sex',
-            ),
-          ),
-          SizedBox(height: 20),
-          TextFormField(
-              decoration: const InputDecoration(
-              hintText: 'Your Mail ID/Username',
-              labelText: 'Mail ID',
-            ),
-          ),
-          SizedBox(height: 20),
-          RaisedButton(
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                color: Colors.yellowAccent,
-                splashColor: Colors.blueAccent,
-                child:Text('Submit',style: TextStyle(color:Colors.red)),
-                onPressed: () => {
-                  Navigator.push(context,MaterialPageRoute(builder: (BuildContext context) => Submitpage())),
-                },
+    return SafeArea(
+      child: Scaffold( 
+        appBar: AppBar(
+          title: Text('Login Page'),
+          backgroundColor: Colors.yellow,
+          centerTitle: true,
+        ),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Form(
+              child: Column(
+               mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextFormField(
+                    decoration: InputDecoration(
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+                    hintText: 'Your Name',
+                    labelText: 'Name',
+                  ),
+                ),
+                SizedBox(height: 20),
+                TextFormField(
+                    decoration: InputDecoration(
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),  
+                    hintText: 'Date of Birth',
+                    labelText: 'DOB',
+                  ),
+                ),
+                SizedBox(height: 20),
+                TextFormField(
+                    decoration: InputDecoration(
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),  
+                    hintText: 'Your Gender',
+                    labelText: 'Sex',
+                  ),
+                ),
+                SizedBox(height: 20),
+                TextFormField(
+                    decoration: InputDecoration(
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),  
+                    hintText: 'Your Mail ID/Username',
+                    labelText: 'Mail ID',
+                  ),
+                ),
+                SizedBox(height: 20),
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+                    hintText: 'Enter your password',
+                     labelText: 'Password',
+                  ),
+                ),
+                SizedBox(height: 20),
+                RaisedButton(
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                      color: Colors.yellowAccent,
+                      splashColor: Colors.blueAccent,
+                      child:Text('Submit',style: TextStyle(color:Colors.red)),
+                      onPressed: () => {
+                        Navigator.push(context,MaterialPageRoute(builder: (BuildContext context) => Submitpage())),
+                      },
+                    ),
+                ],
               ),
-          ],
+            ),
+          ),
         ),
       ),
     );
