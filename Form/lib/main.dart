@@ -79,7 +79,8 @@ class _RegisterpageState extends State<Registerpage> {
                   ),
                 ),
                 SizedBox(height: 20),
-                RaisedButton(
+                // ignore: deprecated_member_use
+                FlatButton(
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                       color: Colors.yellowAccent,
                       splashColor: Colors.blueAccent,
@@ -108,7 +109,7 @@ class Submitpage extends StatelessWidget {
         children: [
           Text('Submitted Successfully',style: TextStyle(color: Colors.orangeAccent,fontSize: 20)),
           SizedBox(height: 20),
-          RaisedButton(onPressed: () => {
+          ElevatedButton(onPressed: () => {
             Navigator.pop(context),
           },
           child: Text('Back'),

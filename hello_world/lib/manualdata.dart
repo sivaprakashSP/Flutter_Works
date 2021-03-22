@@ -34,7 +34,7 @@ class _DatascreenState extends State<Datascreen> {
                 decoration: InputDecoration(labelText: 'Body Temparture'),
               ),
               SizedBox(height:20),
-              RaisedButton(
+              ElevatedButton(
                 child:Text(
                   'Submit',
                   style: TextStyle(color:Colors.red),
