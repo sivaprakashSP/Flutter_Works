@@ -10,7 +10,7 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Registerpage(),
+        body: FirstRoute(),
       ),
       debugShowCheckedModeBanner: false,
     );
@@ -22,13 +22,42 @@ class Registerpage extends StatefulWidget {
   _RegisterpageState createState() => _RegisterpageState();
 }
 
+class FirstRoute extends StatefulWidget {
+  @override
+  _FirstRouteState createState() => _FirstRouteState();
+}
+
+class _FirstRouteState extends State<FirstRoute> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('First Route'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          child: Text('Register'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Registerpage()),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+
+
 class _RegisterpageState extends State<Registerpage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold( 
         appBar: AppBar(
-          title: Text('Login Page'),
+          title: Text('Registration Page'),
           backgroundColor: Colors.yellow,
           centerTitle: true,
         ),
