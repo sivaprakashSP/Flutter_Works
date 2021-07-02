@@ -32,7 +32,8 @@ class _FirstRouteState extends State<FirstRoute> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Route'),
+        title: Text('Basic form'),
+        centerTitle: true,
       ),
       body: Center(
         child: ElevatedButton(
@@ -52,10 +53,10 @@ class _FirstRouteState extends State<FirstRoute> {
 
 
 class _RegisterpageState extends State<Registerpage> {
+  bool _isHidden = true;
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold( 
+    return Scaffold( 
         appBar: AppBar(
           title: Text('Registration Page'),
           backgroundColor: Colors.yellow,
@@ -101,10 +102,15 @@ class _RegisterpageState extends State<Registerpage> {
                 ),
                 SizedBox(height: 20),
                 TextField(
+                  obscureText: _isHidden,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                     hintText: 'Enter your password',
-                     labelText: 'Password',
+                    labelText: 'Password',
+                    suffix: InkWell(
+                      onTap: _togglePasswordView,
+                      child: Icon( Icons.visibility),
+                    ),
                   ),
                 ),
                 SizedBox(height: 20),
@@ -123,8 +129,12 @@ class _RegisterpageState extends State<Registerpage> {
             ),
           ),
         ),
-      ),
-    );
+      );
+  }
+  void _togglePasswordView() {
+    setState(() {
+      _isHidden = !_isHidden;
+    });
   }
 }
 
