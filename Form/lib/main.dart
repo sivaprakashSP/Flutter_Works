@@ -17,10 +17,6 @@ class Myapp extends StatelessWidget {
   }
 }
 
-class Registerpage extends StatefulWidget {
-  @override
-  _RegisterpageState createState() => _RegisterpageState();
-}
 
 class FirstRoute extends StatefulWidget {
   @override
@@ -32,24 +28,62 @@ class _FirstRouteState extends State<FirstRoute> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Basic form'),
+        title: Text('Basic form',style: TextStyle(fontStyle: FontStyle.italic)),
         centerTitle: true,
       ),
       body: Center(
-        child: ElevatedButton(
-          child: Text('Register'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Registerpage()),
-            );
-          },
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+              ElevatedButton(
+                child: Text('Login'),
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Loginpage()),
+                  );
+              }, 
+              ),
+              SizedBox(width: 20),
+              ElevatedButton(
+                child: Text('Register'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Registerpage()),
+                  );
+                },
+              ),
+          ],
         ),
       ),
     );
   }
 }
 
+class Loginpage extends StatefulWidget {
+  @override
+  _LoginpageState createState() => _LoginpageState();
+}
+
+class _LoginpageState extends State<Loginpage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Login  Page',style: TextStyle(fontStyle: FontStyle.italic),
+        ),
+        centerTitle: true,
+      ),
+    );
+  }
+}
+
+
+class Registerpage extends StatefulWidget {
+  @override
+  _RegisterpageState createState() => _RegisterpageState();
+}
 
 
 class _RegisterpageState extends State<Registerpage> {
