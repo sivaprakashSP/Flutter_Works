@@ -149,7 +149,9 @@ class Submitpage extends StatelessWidget {
           Text('Submitted Successfully',style: TextStyle(color: Colors.orangeAccent,fontSize: 20)),
           SizedBox(height: 20),
           ElevatedButton(onPressed: () => {
-            Navigator.pop(context),
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => FirstRoute())),
           },
           child: Text('Back'),
           ),
